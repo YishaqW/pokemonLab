@@ -21,6 +21,11 @@ app.get('/', function(req, res) {
   	res.send('<h1>Welcome to the Pokemon App!</h1>');
 });
 
+app.get('/pokemon', function(req, res) {
+  	res.render("Index");
+});
+
+
 // Tell the app to listen on port 3000
 app.listen(PORT, function() {
  console.log(`Listening on port ${PORT}`);
