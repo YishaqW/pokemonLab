@@ -10,7 +10,7 @@ class Index extends React.Component {
         <ul style={styles.ulContainer}>
         {pokemon.map((pokemon, idx) => (
           <li style={styles.item}>
-          This is <a href={`/pokemon/${pokemon.idx}`}>{cFirstLetter(pokemon.name)}</a>{" "}<img src={pokemon.img} />
+          This is <a href={`/pokemon/${pokemon.idx}`}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</a>{" "}<img src={pokemon.img} />
             <br />
           </li>
         ))}
@@ -20,10 +20,6 @@ class Index extends React.Component {
       </div>
     );
   }
-}
-
-function cFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const styles = {
