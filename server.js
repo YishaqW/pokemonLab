@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/pokemon', function(req, res) {
-  	res.render("Index");
+  	res.render("Index", {pokemon});
 });
 
 
